@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <app-product-list [productList]="productList"></app-product-list>
+  <div class="product-line"></div>
+  <app-user-info [user]="user"></app-user-info>
+  <div class="product-line"></div>
+  <app-calculator></app-calculator>
+  <div class="product-line"></div>
+  <app-product-list2 [productList2]="productList2" (selectProduct)="onSelectProduct($event)"></app-product-list2>
+  <app-product-details [product]="selectedProduct" (updateProduct)="selectedProduct($event)"></app-product-details>
+</div>

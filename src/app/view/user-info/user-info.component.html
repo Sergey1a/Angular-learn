@@ -1,0 +1,22 @@
+<div *ngIf="user">
+  <h1>Отображение роли</h1>
+  <p>{{user.name}}</p>
+  <p>{{user.age}}</p>
+  <div [ngClass]="{'admin' : user.role === 'admin'}">
+    <p><strong>Имя: </strong> <input [(ngModel)]="user.name"/></p>
+    <p><strong>Возраст: </strong> <input [(ngModel)]="user.age"/></p>
+    <p><strong>Роль: </strong>{{user.role}}</p>
+
+    <div *ngIf="user.role === 'admin'; else otherRole">
+      <p>Ваша роль admin</p>
+    </div>
+    <ng-template #otherRole>
+      <div *ngIf="user.role === 'user'; else gostRole"></div>
+      <p>Ваша роль user</p>
+    </ng-template>
+    <ng-template #gostRole>
+      <p>Ваша роль гость</p>
+    </ng-template>
+  </div>
+  <button (click)="saveUser()">Сохранить</button>
+</div>

@@ -1,0 +1,5 @@
+<h2>Product Details</h2>
+<p><strong>ID:</strong> {{ product.id }}</p>
+<p><strong>Name:</strong> <input [(ngModel)]="product.name" /></p>
+<p><strong>Description:</strong> <input [(ngModel)]="product.price" /></p>
+<button (click)="updateProductDetails()">Сохранить изменения</button>
