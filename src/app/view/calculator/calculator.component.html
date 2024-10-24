@@ -1,0 +1,28 @@
+<div class="calculator">
+  <div>
+    <label>Число 1: </label>
+    <input [(ngModel)]="num1" type="number"/>
+  </div>
+
+  <div>
+    <label>Число 2: </label>
+    <input [(ngModel)]="num2" type="number"/>
+  </div>
+
+  <div>
+    <label>Операция</label>
+    <select [(ngModel)]="operation">
+      <option value="addition">Сложение</option>
+      <option value=" subtraction">Вычитание</option>
+      <option value="multiplication">Умножение</option>
+      <option value="division">Деление</option>
+    </select>
+  </div>
+
+  <button (click)="calculate()">Вычислить</button>
+
+  <div>{{result}}</div>
+</div>
+
+
+

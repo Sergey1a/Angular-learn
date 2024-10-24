@@ -1,0 +1,11 @@
+
+<div class="wrapper-product">
+  <ul class="list" *ngFor="let product of productList2; let i = index"
+      [ngStyle]="{}">
+
+    <li>{{product.name}}</li>
+    <li>{{product.price}}</li>
+
+    <button (click)="onSelect(product)">Подробнее</button>
+  </ul>
+</div>

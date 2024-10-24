@@ -1,0 +1,10 @@
+<div class="wrapper-product">
+  <ul class="list" *ngFor="let product of productList; let i = index"
+      [ngStyle]="{color: product.price > 100 ? 'red' : 'green'}">
+
+    <li>{{product.name}}</li>
+    <li>{{product.price}}</li>
+
+    <button (click)="removeProduct(i)">Удалить</button>
+  </ul>
+</div>
