@@ -8,6 +8,7 @@ import {IUserInfo} from "./view/user-info/user-info.model";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //вывфв
   static list = [
     {id: 1,name: 'хлеб', price: 20},
     {id: 2,name: 'яйца', price: 30},
